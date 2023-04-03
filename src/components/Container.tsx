@@ -5,7 +5,7 @@ export function Container({
   }) {
   return (
     <main
-      className="max-w-3xl mx-auto px-8"
+      className="max-w-3xl mx-auto px-4"
     >
       {children}
     </main>
