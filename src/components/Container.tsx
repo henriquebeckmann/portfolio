@@ -1,11 +1,13 @@
 export function Container({
   children,
   as = "div",
+  sx = "",
 }: {
     children: React.ReactNode,
-    as?: "div" | "main"
+    as?: "div" | "main",
+    sx?: string,
   }) {
-  const styles = "max-w-3xl mx-auto px-4 sm:max-w-xl"
+  const styles = `mx-auto px-4 ${sx}`
 
   if (as === "main") {
     return (

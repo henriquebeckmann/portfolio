@@ -15,7 +15,7 @@ export function Title({
         "text-xl my-4 underline underline-offset-8 decoration-4 decoration-slate-300 dark:decoration-zinc-700"
       )
       default: return (
-        "text-xl"
+        "text-lg"
       )
     }
   }

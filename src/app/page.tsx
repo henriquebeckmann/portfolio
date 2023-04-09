@@ -19,16 +19,16 @@ import {
 
 export default function Home() {
   return (
-    <Container>
+    <Container sx="mt-16 max-w-xl">
 
-      <Box sx="text-center mb-6 ">
+      <Box sx="text-center my-6 ">
         <p>Hello, I'm an independent app developer living in Brazil!</p>
       </Box>
 
       <header className="sm:flex sm:items-center sm:justify-between">
         <div>
           <Title variant="big">Henrique Beckmann</Title>
-          <p>Computer engineer</p>
+          <p>Computer engineering student</p>
         </div>
         <Center sx="mt-4">
           <Avatar src="./me.png" />
@@ -76,22 +76,20 @@ export default function Home() {
 
       <section>
         <Title variant="underline">On the web</Title>
-        <Social>
+        <Social href="https://twitter.com">
           <RxTwitterLogo /> Follow on Twitter
         </Social>
 
-        <Social>
-            <RxInstagramLogo /> Follow on Instagram
+        <Social href="https://instagram.com">
+          <RxInstagramLogo /> Follow on Instagram
         </Social>
 
-        <Social>
-          <RxGithubLogo />
-          <a href="#">Follow on GitHub</a>
+        <Social href="https://github.com">
+          <RxGithubLogo /> Follow on GitHub
         </Social>
 
-        <Social>
-          <RxLinkedinLogo />
-          <a href="#">Follow on Linkeding</a>
+        <Social href="https://linkedin.com">
+          <RxLinkedinLogo /> Follow on LinkedIn
         </Social>
       </section>
 

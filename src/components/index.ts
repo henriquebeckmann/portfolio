@@ -7,3 +7,4 @@ export { Center } from "./Center";
 export { Bio } from "./Bio"
 export { Social } from "./Social"
 export { Footer } from "./Footer"
+export { Navbar } from "./Navbar"

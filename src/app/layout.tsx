@@ -1,11 +1,9 @@
-import { Container } from '@/components/Container'
-import './globals.css'
-import { Footer } from '@/components'
+'use client'
+import { ThemeProvider } from 'next-themes'
 
-export const metadata = {
-  title: 'Henrique Beckmann - Homepage',
-  description: 'Personal portfolio',
-}
+import { Navbar, Footer, Container } from '@/components'
+
+import './globals.css'
 
 export default function RootLayout({
   children,
@@ -15,10 +13,13 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className="bg-slate-200 text-zinc-800 dark:bg-zinc-800 dark:text-slate-200">
-        <Container as="main">
-          {children}
-          <Footer />
-        </Container>
+        <ThemeProvider enableSystem={true} attribute="class">
+          <Container as="main" sx="max-w-3xl">
+            <Navbar />
+            {children}
+            <Footer />
+          </Container>
+        </ThemeProvider>
       </body>
     </html>
   )
