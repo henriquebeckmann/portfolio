@@ -96,7 +96,7 @@ ${pathname === "/uses" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
             </Link>
 
             <Link
-              href="https://github.com"
+              href="https://github.com/henriquebeckmann/portfolio"
               target="_blank"
               onClick={() => setIsOpen(false)}
               className={`p-2 sm:flex items-center gap-1 hover:underline underline-offset-4
