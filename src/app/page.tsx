@@ -22,7 +22,7 @@ export default function Home() {
     <Container sx="mt-16 max-w-xl">
 
       <Box sx="text-center my-6 ">
-        <p>Hello, I'm an independent app developer living in Brazil!</p>
+        <p>Hello, I&apos;m an independent app developer living in Brazil!</p>
       </Box>
 
       <header className="sm:flex sm:items-center sm:justify-between">
@@ -31,7 +31,7 @@ export default function Home() {
           <p>Computer engineering student</p>
         </div>
         <Center sx="mt-4">
-          <Avatar src="./me.png" />
+          <Avatar src="/me.png" />
         </Center>
       </header>
 
