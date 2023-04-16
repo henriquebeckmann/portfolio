@@ -1,32 +1,30 @@
-export function Title({
-  children,
-  variant,
-}: {
-    children: React.ReactNode,
-    variant?: string
-  }) {
+type TitleProps = {
+  children: React.ReactNode;
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
+  variant?: string;
+};
 
-  const variantType = (variant: string) => {
-    switch (variant) {
-      case 'big': return (
-        "text-3xl"
-      )
-      case 'underline': return (
-        "text-xl my-4 underline underline-offset-8 decoration-4 decoration-slate-300 dark:decoration-zinc-700"
-      )
-      default: return (
-        "text-lg"
-      )
-    }
+export const Title = ({ children, level=2, variant }: TitleProps) => {
+  const TagName = `h${level}` as keyof JSX.IntrinsicElements;
+  const defaultClasses = `font-bold`;
+
+  let variantClasses = "text-3xl";
+  switch (variant) {
+    case "default":
+      break;
+    case "subtitle":
+      variantClasses = "text-lg";
+      break;
+    case "underline":
+      variantClasses =
+        "text-xl my-4 underline underline-offset-8 decoration-4 decoration-slate-300 dark:decoration-zinc-700";
+    default:
+      break;
   }
 
   return (
-    <h3
-      className={`font-bold ${variantType(String(variant))}`}
-    >
+    <TagName className={`${defaultClasses} ${variantClasses}`}>
       {children}
-    </h3>
-
-
-  )
-}
+    </TagName>
+  );
+};
