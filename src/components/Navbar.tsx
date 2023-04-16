@@ -68,7 +68,7 @@ ${pathname === "/" && "bg-slate-300 dark:bg-zinc-700"}`}
               className={`p-2 hover:underline underline-offset-4 ${
                 isOpen && "block"
               }
-${pathname === "/works" ? "bg-slate-400 dark:bg-zinc-800" : null}`}
+${pathname === "/works" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
             >
               Works
             </Link>
@@ -79,7 +79,7 @@ ${pathname === "/works" ? "bg-slate-400 dark:bg-zinc-800" : null}`}
               className={`p-2 hover:underline underline-offset-4 ${
                 isOpen && "block"
               }
-${pathname === "/posts" ? "bg-slate-200 dark:bg-zinc-800" : null}`}
+${pathname === "/posts" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
             >
               Posts
             </Link>
@@ -90,7 +90,7 @@ ${pathname === "/posts" ? "bg-slate-200 dark:bg-zinc-800" : null}`}
               className={`p-2 hover:underline underline-offset-4 ${
                 isOpen && "block"
               }
-${pathname === "/uses" ? "bg-slate-200 dark:bg-zinc-800" : null}`}
+${pathname === "/uses" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
             >
               Uses
             </Link>
