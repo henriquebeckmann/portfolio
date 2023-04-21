@@ -2,9 +2,9 @@ export function Social({
   children,
   href,
 }: {
-  children: React.ReactNode,
-  href: string
-  }) {
+  children: React.ReactNode;
+  href: string;
+}) {
   return (
     <div className="flex">
       <a
@@ -18,5 +18,5 @@ export function Social({
         {children}
       </a>
     </div>
-  )
+  );
 }

@@ -4,20 +4,20 @@ type TitleProps = {
   variant?: string;
 };
 
-export const Title = ({ children, level=2, variant }: TitleProps) => {
+export const Title = ({ children, level = 2, variant }: TitleProps) => {
   const TagName = `h${level}` as keyof JSX.IntrinsicElements;
   const defaultClasses = `font-bold`;
 
-  let variantClasses = "text-3xl";
+  let variantClasses = 'text-3xl';
   switch (variant) {
-    case "default":
+    case 'default':
       break;
-    case "subtitle":
-      variantClasses = "text-lg";
+    case 'subtitle':
+      variantClasses = 'text-lg';
       break;
-    case "underline":
+    case 'underline':
       variantClasses =
-        "text-xl my-4 underline underline-offset-8 decoration-4 decoration-slate-300 dark:decoration-zinc-700";
+        'text-xl my-4 underline underline-offset-8 decoration-4 decoration-slate-300 dark:decoration-zinc-700';
     default:
       break;
   }

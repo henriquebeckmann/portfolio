@@ -1,14 +1,14 @@
-'use client'
-import { ThemeProvider } from 'next-themes'
+'use client';
+import { ThemeProvider } from 'next-themes';
 
-import { Navbar, Footer, Container } from '@/components'
+import { Navbar, Footer, Container } from '@/components';
 
-import './globals.css'
+import './globals.css';
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="pt">
@@ -22,5 +22,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

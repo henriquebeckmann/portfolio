@@ -1,25 +1,25 @@
-"use client";
-import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
-import { usePathname } from "next/navigation";
+'use client';
+import { useState, useEffect } from 'react';
+import { useTheme } from 'next-themes';
+import { usePathname } from 'next/navigation';
 
-import Link from "next/link";
+import Link from 'next/link';
 
-import { RxGithubLogo } from "react-icons/rx";
+import { RxGithubLogo } from 'react-icons/rx';
 import {
   HiOutlineCog,
   HiOutlineMenu,
   HiOutlineMoon,
   HiOutlineSun,
-} from "react-icons/hi";
+} from 'react-icons/hi';
 
-import { Title } from "./Title";
+import { Title } from './Title';
 
 // NOTE: needs to be refactored
 // FIX: background color for current path in large devices
 export function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const currentTheme = theme === 'system' ? systemTheme : theme;
 
   const [mounted, setMounted] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +31,7 @@ export function Navbar() {
   }, [mounted]);
 
   const IconTheme = () => {
-    const Icon = currentTheme === "dark" ? HiOutlineSun : HiOutlineMoon;
+    const Icon = currentTheme === 'dark' ? HiOutlineSun : HiOutlineMoon;
 
     return <Icon className="text-slate-200 dark:text-zinc-800" />;
   };
@@ -51,13 +51,13 @@ export function Navbar() {
             className={`fixed top-12 right-8 py-2 w-56 rounded-lg bg-slate-200 dark:bg-zinc-800
 ring-1 ring-slate-400 dark:ring-zinc-600
 sm:static sm:flex gap-4 sm:ring-0 sm:p-0 sm:bg-transparent sm:dark:bg-transparent
-${isOpen ? "block" : "hidden"}`}
+${isOpen ? 'block' : 'hidden'}`}
           >
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
               className={`block p-2 hover:underline underline-offset-4 sm:hidden
-${pathname === "/" && "bg-slate-300 dark:bg-zinc-700"}`}
+${pathname === '/' && 'bg-slate-300 dark:bg-zinc-700'}`}
             >
               About
             </Link>
@@ -66,9 +66,9 @@ ${pathname === "/" && "bg-slate-300 dark:bg-zinc-700"}`}
               href="/works"
               onClick={() => setIsOpen(false)}
               className={`p-2 hover:underline underline-offset-4 ${
-                isOpen && "block"
+                isOpen && 'block'
               }
-${pathname === "/works" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
+${pathname === '/works' ? 'bg-slate-300 dark:bg-zinc-700' : null}`}
             >
               Works
             </Link>
@@ -77,9 +77,9 @@ ${pathname === "/works" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
               href="/posts"
               onClick={() => setIsOpen(false)}
               className={`p-2 hover:underline underline-offset-4 ${
-                isOpen && "block"
+                isOpen && 'block'
               }
-${pathname === "/posts" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
+${pathname === '/posts' ? 'bg-slate-300 dark:bg-zinc-700' : null}`}
             >
               Posts
             </Link>
@@ -88,9 +88,9 @@ ${pathname === "/posts" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
               href="/uses"
               onClick={() => setIsOpen(false)}
               className={`p-2 hover:underline underline-offset-4 ${
-                isOpen && "block"
+                isOpen && 'block'
               }
-${pathname === "/uses" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
+${pathname === '/uses' ? 'bg-slate-300 dark:bg-zinc-700' : null}`}
             >
               Uses
             </Link>
@@ -100,7 +100,7 @@ ${pathname === "/uses" ? "bg-slate-300 dark:bg-zinc-700" : null}`}
               target="_blank"
               onClick={() => setIsOpen(false)}
               className={`p-2 sm:flex items-center gap-1 hover:underline underline-offset-4
-${isOpen && "block"}`}
+${isOpen && 'block'}`}
             >
               <RxGithubLogo className="hidden sm:flex" />
               <span className="sm:hidden">View</span> Source
@@ -113,7 +113,7 @@ ${isOpen && "block"}`}
             <button
               className="p-2 rounded-lg bg-violet-700 hover:bg-violet-800 dark:bg-amber-300 dark:hover:bg-amber-400 animate-entry"
               onClick={() => {
-                setTheme(currentTheme === "dark" ? "light" : "dark");
+                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
                 setMounted(false);
               }}
             >
@@ -130,5 +130,5 @@ ${isOpen && "block"}`}
         </div>
       </div>
     </nav>
-  )
+  );
 }
